@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservas</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+  <div class="wrapper">
+  <header>
+    <h1>Reservas</h1>
+  </header>
+
+  <div class="container">
+    <form id="form-reservas">
+      <label for="nombreCliente">Ingrese su nombre</label>
+      <input type="text" id="nombreCliente" required>
+
+      <label for="fecha">Ingrese la fecha</label>
+      <input type="date" id="fecha" required>
+
+      <label for="cantidadDePersonas">Ingrese la cantidad de personas</label>
+      <input type="number" id="cantidadDePersonas" min="1" max="15" required>
+
+      <label for="turno">Elija el turno</label>
+      <select id="turno" required>
+        <option value="">Seleccione una opción</option>
+        <option value="Mediodía">Mediodía</option>
+        <option value="Noche">Noche</option>
+      </select>
+
+      <div class="form-buttons">
+        <button type="button" id="btnCrearReserva" class="primary">Crear Reserva</button>
+        <button type="button" id="btnCerrarSesion" class="secondary">Cerrar Sesión</button>
+      </div>
+    </form>
+
+    <h2>Lista de Reservas</h2>
+    <div id="listado"></div>
+  </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Restaurant DON MARIO</p>
+  </footer>
+
+  <script type="module" src="/public/controlador.js"></script>
+</body>
+</html>
